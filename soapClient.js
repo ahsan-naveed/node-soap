@@ -12,9 +12,7 @@ soap.createClient(url, (err, client) => {
 
   // Parameters of the service call: they need
   // to be called as specified in the WSDL file
-  const args = {
-    clocksync: "clocksyncRequest"
-  };
+  const args = JSON.stringify({ clocksync: "clocksyncRequest" });
 
   // start timer before sending request
   const start = new Date().getTime();

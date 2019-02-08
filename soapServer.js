@@ -9,7 +9,7 @@ const port = 8080;
 // @WebMethod
 const serverTime = args => {
   const date = new Date();
-  const { clocksync } = args;
+  const { clocksync } = JSON.parse(args);
   console.log(`@WebMethod invoked at ${date.toISOString()}`);
   return clocksync === "clocksyncRequest"
     ? JSON.stringify({ serverTime: `${date.getTime()}` })
