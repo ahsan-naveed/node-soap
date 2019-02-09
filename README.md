@@ -30,7 +30,8 @@ First one was to actually create a complex data type within our `.wsdl` file whi
 3. `npm install`
 4. Start server: `node soapServer.js`
 5. Start client: `node soapClient.js`
-   _Note:_ Run client and server on two different unix machines.
+
+   _Note: Run client and server on two different unix machines._
 
 ## Output
 
