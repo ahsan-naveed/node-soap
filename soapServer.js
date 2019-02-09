@@ -36,6 +36,8 @@ const app = express();
 
 // root handler
 app.get("/", function(req, res) {
+  // print the client who is making the request
+  console.log(req.connection.remoteAddress);
   res.send("Serving Node Soap Web Service...");
 });
 

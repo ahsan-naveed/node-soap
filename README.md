@@ -1,3 +1,19 @@
 ## CMPT 431 - Assignment 02
 
-Create a SOAP service using the Web Service Definition Language WSDL (for creating WSDL, you can use Eclipse IDE or do it by hand) and deploy it in using SimpleHTTPServer (a python web framework) or Apache Tomcat server or another web server of your choice. Then, write a client Web application (see example here) to access the service you have created, in order to perform the same clock synchronization scheme as in Assignment 1. Exchanged data should be formatted in JASON.
+## Summary
+
+A SOAP web service that uses the Web Service Definition Language WSDL (written by hand) and is deployed using SimpleHTTPServer (express server). Also, a SOAP client accesses the service we have created, in order to perform the same clock synchronization scheme as in Assignment 1. Exchanged data is formatted to JSON string and is parsed back to JSON on both client and server side.
+
+## Service
+
+```xml
+<wsdl:service name="ServerTimeService">
+        <wsdl:port name="ServerTimeServiceSoapPort" binding="tns:ServerTimeServiceSoapBinding">
+            <soap:address location="http://localhost:8080/wsdl" />
+        </wsdl:port>
+        <wsdl:port name="ServerTimeServiceSoap12Port" binding="tns:ServerTimeServiceSoap12Binding">
+            <soap12:address location="http://localhost:8080/wsdl" />
+        </wsdl:port>
+    </wsdl:service>
+
+```
