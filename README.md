@@ -31,7 +31,14 @@ Client sends an XML request to the Server and then server responds back with an 
 
 ## Output
 
-![Soap Server](server_listening.png)
+1. SOAP Server
+   ![Soap Server](server_listening.png)
+
+2. Visit `http://localhost:8080/wsdl?wsdl`
+   ![Service Definition](service_def.png)
+
+3. SOAP Client
+   ![Soap Client](soap_client.png)
 
 ## References:
 
